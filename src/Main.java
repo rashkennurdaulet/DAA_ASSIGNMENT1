@@ -23,5 +23,22 @@ public class Main {
         int kthElement = selector.select(arr3, k);
         System.out.println("Select k=" + k + ": " + kthElement + " (Expected: " + arr1[k] + ")");
         System.out.println("Select depth: " + selector.getMaxDepth() + ", comparisons: " + selector.getComparisons());
+
+        Point[] points = {
+                new Point(2, 3),
+                new Point(12, 30),
+                new Point(40, 50),
+                new Point(5, 1),
+                new Point(12, 10),
+                new Point(3, 4),
+                new Point(7, 8),
+                new Point(1, 9)
+        };
+
+        ClosestPairSolver closestSolver = new ClosestPairSolver();
+        double minDist = closestSolver.findClosestPair(points);
+        double expectedDist = closestSolver.bruteForce(points);
+        System.out.println("Closest Pair distance: " + minDist + " (Expected: " + expectedDist + ")");
+        System.out.println("Closest Pair depth: " + closestSolver.getMaxDepth() + ", comparisons: " + closestSolver.getComparisons());
     }
 }
