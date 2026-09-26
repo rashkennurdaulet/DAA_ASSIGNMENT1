@@ -44,6 +44,7 @@ public class Main {
         System.out.println("\n--- Running Performance Experiments ---");
         Experiment experiment = new Experiment();
         experiment.runAllExperiments("results/results.csv");
+        experiment.runAllExperiments("results/results.csv");
     }
 
 }
