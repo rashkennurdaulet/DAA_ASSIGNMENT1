@@ -40,5 +40,10 @@ public class Main {
         double expectedDist = closestSolver.bruteForce(points);
         System.out.println("Closest Pair distance: " + minDist + " (Expected: " + expectedDist + ")");
         System.out.println("Closest Pair depth: " + closestSolver.getMaxDepth() + ", comparisons: " + closestSolver.getComparisons());
+
+        System.out.println("\n--- Running Performance Experiments ---");
+        Experiment experiment = new Experiment();
+        experiment.runAllExperiments("results/results.csv");
     }
+
 }
